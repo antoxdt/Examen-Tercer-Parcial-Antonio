@@ -1,0 +1,13 @@
+:root {
+  --color-fondo: #121212;
+  --color-card: #ffffff;
+  --color-boton: #4CAF50;
+  --color-boton-hover: #388e3c;
+  --padding: 1rem;
+  --gap: 1.5rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+}
