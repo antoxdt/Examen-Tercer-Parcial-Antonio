@@ -1,29 +1,103 @@
 :root {
-  --color-fondo: #121212;
-  --color-card: #ffffff;
-  --color-boton: #4CAF50;
-  --color-boton-hover: #388e3c;
+  --bg-color: #1e1f26;
+  --text-color: #ffffff;
+  --card-bg: #ffffff;
+  --accent-color: #ff6f61;
   --padding: 1rem;
   --gap: 1.5rem;
+  --border-radius: 10px;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--color-fondo);
-  color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-.card p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #dddddd;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--padding);
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+/* Grilla de productos */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+/* Tarjeta de producto */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .card h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #ffffff;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin: 0;
 }
 
+.card p {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.card button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.card button:hover {
+  background-color: #e2574d;
+}
+
+.card button:active {
+  background-color: #ff3b2e;
+  transform: scale(0.97);
+}
+
+/* Responsive: tablet */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: escritorio */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
