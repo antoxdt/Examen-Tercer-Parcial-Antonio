@@ -84,7 +84,7 @@ h1 {
 }
 
 .card button:active {
-  background-color: #ff3b2e;
+  background-color: #ff1e00;
   transform: scale(0.97);
 }
 
